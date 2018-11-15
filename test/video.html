@@ -1,3 +1,4 @@
+<!--READ THE DOCS https://github.com/aframevr/aframe/blob/79359270a2e29f9ba13d901f7ae15861e02babdc/docs/primitives/a-video.md-->
 
 <head>
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,11 +23,17 @@
 <body style='margin : 0px; overflow: hidden;'>
 
 	<a-scene embedded arjs>
- 
-	    <a-video muted webkit-playsinline playsinline autoplay loop="true" src="media/testVideo.mp4" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
 
-		<a-marker-camera type='pattern' url='marker/testA.patt'></a-marker-camera>
+		<a-marker type='pattern' url='marker/testA.patt'>
+			<a-video muted webkit-playsinline playsinline autoplay loop="true" src="media/soccer1.webm" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
+		</a-marker>
 
+		<a-marker type='pattern' url='marker/testG.patt'>
+			<!--<a-box position="0 0 0" scale="1.5 1.5 1.5" color="yellow"></a-box>-->
+			<a-video muted webkit-playsinline playsinline autoplay loop="true" src="media/dancer1.webm" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
+		</a-marker>
+
+		<a-entity camera></a-entity>
   	</a-scene>
 
 </body>
