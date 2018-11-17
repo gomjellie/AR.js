@@ -1,2 +1,34 @@
 # MacOS
 .DS_Store
+# AWS Ű #
+##########
+*.pem
+nohup.out
+
+# Logs and databases #
+#####################
+log/*
+app/log/
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+
+# virtual-env #
+###############
+.env
+venv/*
+__pycache__/*
+app/__pycache__/*
+
+# jupyter notebook #
+# ##################
+
+*.ipynb
+
+# Socket Stuff #
+################
+soongsiri.sock
