@@ -20,7 +20,6 @@ def box():
 
 @app.route("/image", methods=["GET"])
 def image():
-    source_url_prefix = "http://localhost:4000/api/mobile/file?fileDirectory="
     source_dir = request.args.get("src")
     source_dir = \
         source_dir or \
