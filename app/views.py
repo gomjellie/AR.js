@@ -1,7 +1,7 @@
 from flask import render_template, jsonify, request
 from app import app
 
-source_url_prefix = "http://localhost:4000/api/mobile/file?fileDirectory="
+source_url_prefix = "https://colaboapp.cc/api/mobile/file?fileDirectory="
 
 
 @app.route("/video", methods=["GET"])
