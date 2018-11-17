@@ -5,11 +5,12 @@ Description=gunicorn instance to serve ar.js
 After=network.target
 
 [Service]
-User=ubuntu
+User=root
 Group=www-data
 WorkingDirectory=/root/AR.js
 Environment="PATH=/root/AR.js/venv/bin"
-ExecStart=/root/AR.js/venv/bin/gunicorn --workers 3 --bind unix:/root/AR.js/ar.sock -m 777 wsgi:app 
+ExecStart=/root/AR.js/venv/bin/gunicorn --workers 3 --bind unix:/root/AR.js/ar.sock -m 664 wsgi:app 
 
 [Install]
 WantedBy=multi-user.target
+
