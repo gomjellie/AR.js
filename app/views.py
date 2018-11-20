@@ -11,7 +11,8 @@ def video():
     source_dir = \
         source_dir or \
         "uploads/qwer/5befd553dab03c4f3c5acbb3/soccer1.webm"
-    return render_template("video.html", source_url="{}{}".format(source_url_prefix, source_dir, rand=randint(0, 255555555)))
+    rand_val = randint(0, 255555555)
+    return render_template("video.html", source_url="{}{}".format(source_url_prefix, source_dir), rand=rand_val)
 
 
 @app.route("/box", methods=["GET"])
