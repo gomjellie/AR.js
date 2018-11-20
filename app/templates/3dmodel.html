@@ -25,9 +25,12 @@
 		    <a-asset-item id="test" src="{{ object_url }}" ></a-asset-item>
 		    <a-asset-item id="test-mtl" src="{{ mtl_url }} "></a-asset-item>
 		</a-assets>
-		<a-entity scale="0.01 0.01 0.01" rotation="290 80 300" obj-model="obj: #test; mtl: #test-mtl"></a-entity>
 
-	    <a-marker-camera type='pattern' url='marker/testA.patt'></a-marker-camera>
+		<a-marker type='pattern' url='/static/marker/testA.patt'>
+            <a-entity scale="0.0005 0.0005 0.0005" rotation="0 0 0" obj-model="obj: #test; mtl: #test-mtl"></a-entity>
+        </a-marker>
+
+	    <a-entity camera></a-entity>
 
   	</a-scene>
 

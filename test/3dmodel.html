@@ -25,17 +25,13 @@
 		    <a-asset-item id="test" src="media/menwithmap2.obj" ></a-asset-item>
 		    <a-asset-item id="test-mtl" src="media/menwithmap2.mtl"></a-asset-item>
 		</a-assets>
-		<a-entity scale="0.01 0.01 0.01" rotation="290 80 300" obj-model="obj: #test; mtl: #test-mtl"></a-entity>
 		<!-- <a-entity obj-model="obj: #test; mtl: #tree-mtl"></a-entity> -->
-	
 
-		<!-- <a-assets>
-			<a-asset-item id="test" src="media/BoomBox.gltf"></a-asset-item>
-		</a-assets>
-		
-		<a-entity gltf-model="#test"></a-entity> -->
+        <a-marker type='pattern' url='marker/testA.patt'>
+            <a-entity scale="0.0005 0.0005 0.0005" rotation="0 0 0" obj-model="obj: #test; mtl: #test-mtl"></a-entity>
+        </a-marker>
 
-	    <a-marker-camera type='pattern' url='marker/testA.patt'></a-marker-camera>
+	    <a-entity camera></a-entity>
 
   	</a-scene>
 
