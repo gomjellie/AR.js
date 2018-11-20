@@ -5,6 +5,12 @@
 	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	<!-- include ar.js for A-Frame -->
 	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script>
+        window.addEventListener('click', function () {
+            var v = document.querySelector('#vid');
+            v.play();
+        });
+    </script>
 </head>
 
 
@@ -25,7 +31,7 @@
 	<a-scene embedded arjs>
 
 		<a-marker type='pattern' url='/static/marker/testA.patt'>
-			<a-video muted loop="true" src="/static/media/Green Screen Bear Dancing.webm?n={{ rand }}" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
+			<a-video id="vid" muted loop="true" src="/static/media/Green Screen Bear Dancing.webm?n={{ rand }}" width="1.6" height="0.9" rotation="270 0 0" crossorigin="anonymous" ></a-video>
 		</a-marker>
 
 		<a-entity camera></a-entity>
