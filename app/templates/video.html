@@ -24,11 +24,11 @@
 
 	<a-scene embedded arjs>
         <a-assets>
-            <video id="test-video" autoplay loop="true" src="/static/media/testVideo.mp4"></video>
+            <video id="test-video" autoplay loop="true" src="/static/media/testVideo.mp4?{{ rand }}"></video>
         </a-assets>
 
 		<a-marker type='pattern' url='/static/marker/testA.patt'>
-			<a-video loop="true" src="#test-video" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
+			<a-video muted loop="true" src="#test-video" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
 		</a-marker>
 
 		<a-entity camera></a-entity>
