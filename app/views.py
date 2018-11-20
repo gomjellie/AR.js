@@ -20,6 +20,14 @@ def box():
     return render_template("box.html")
 
 
+@app.route("/3dmodel", methods=["GET"])
+def three_dimension_model():
+    source_dir = request.args.get("src")
+    object_url = "{}{}".format(source_url_prefix, source_dir)
+    mtl_url = object_url.replace("obj", )
+    return render_template("3dmodel.html", object_url=object_url, mtl_url=mtl_url)
+
+
 @app.route("/image", methods=["GET"])
 def image():
     source_dir = request.args.get("src")
