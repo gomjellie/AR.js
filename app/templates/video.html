@@ -23,9 +23,12 @@
 <body style='margin : 0px; overflow: hidden;'>
 
 	<a-scene embedded arjs>
+        <a-assets>
+            <video id="test-video" autoplay loop="true" src="/static/media/testVideo.mp4"></video>
+        </a-assets>
 
 		<a-marker type='pattern' url='/static/marker/testA.patt'>
-			<a-video muted webkit-playsinline playsinline autoplay loop="true" src="/static/media/testVideo.mp4" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
+			<a-video loop="true" src="#test-video" width="1.6" height="0.9" rotation="270 0 0" ></a-video>
 		</a-marker>
 
 		<a-entity camera></a-entity>
