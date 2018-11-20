@@ -6,9 +6,16 @@
 	<!-- include ar.js for A-Frame -->
 	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <script>
+        var isPlaying=true;
         window.addEventListener('click', function () {
             var v = document.querySelector('#vid');
-            v.play();
+            if (isPlaying) {
+                v.play();
+                isPlaying=true;
+            } else {
+                v.pause();
+                isPlaying=false;
+            }
         });
     </script>
 </head>
