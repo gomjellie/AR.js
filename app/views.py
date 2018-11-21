@@ -24,7 +24,7 @@ def box():
 def three_dimension_model():
     source_dir = request.args.get("src")
     object_url = "{}{}".format(source_url_prefix, source_dir)
-    mtl_url = object_url.replace("obj", )
+    mtl_url = object_url.replace("obj", "mtl")
     return render_template("3dmodel.html", object_url=object_url, mtl_url=mtl_url)
 
 
