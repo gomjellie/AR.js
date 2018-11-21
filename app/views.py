@@ -27,6 +27,11 @@ def three_dimension_model():
     mtl_url = object_url.replace("obj", "mtl")
     return render_template("3dmodel.html", object_url=object_url, mtl_url=mtl_url)
 
+@app.route("/video_chroma_key", methods=["GET"])
+def video_chroma_key():
+    source_dir = request.args.get("src")
+    return render_template("video_chroma_key", source_url="{}{}".format(source_url_prefix, source_dir))
+
 
 @app.route("/image", methods=["GET"])
 def image():
