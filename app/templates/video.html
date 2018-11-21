@@ -5,22 +5,6 @@
 	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	<!-- include ar.js for A-Frame -->
 	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-    <script>
-        var isPlaying=false;
-        window.addEventListener('click', function () {
-            var v = document.querySelector('#vid');
-
-            console.log("isPlaying", isPlaying);
-            if (isPlaying) {
-                v.pause();
-                isPlaying=false;
-            } else {
-                v.pause();
-                v.play();
-                isPlaying=true;
-            }
-        });
-    </script>
 </head>
 
 
@@ -39,12 +23,13 @@
 <body style='margin : 0px; overflow: hidden;'>
 
 	<a-scene embedded arjs>
+        <a-assets>
+			<video id="vid" src="{{ source_url }}" muted webkit-playsinline playsinline autoplay loop></video>
+		</a-assets>
 
-		<a-marker type='pattern' url='/static/marker/testA.patt'>
-			<a-video id="vid" muted loop src="{{source_url}}&n={{rand}}" width="1.6" height="0.9" rotation="270 0 0"></a-video>
-		</a-marker>
+        <a-entity position="0 0.6 0" scale="3.2 1.8 0" material="src: #vid;" geometry="primitive: box"></a-entity>
 
-		<a-entity camera></a-entity>
+        <a-marker-camera type='pattern' url='/static/marker/testA.patt'></a-marker-camera>
   	</a-scene>
 
 </body>
