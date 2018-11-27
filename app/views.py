@@ -41,6 +41,9 @@ def image():
         "uploads/qwer/5befd553dab03c4f3c5acbb3/soccer1.webm"
     return render_template("image.html", source_url="{}{}".format(source_url_prefix, source_dir))
 
+@app.route("/joowon", methods=["GET"])
+def joowon():
+    return render_template("joowon.html")
 
 @app.errorhandler(404)
 def not_found(error):
