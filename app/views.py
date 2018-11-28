@@ -45,6 +45,10 @@ def image():
 def joowon():
     return render_template("joowon.html")
 
+@app.route("/doone", methods=["GET"])
+def doone():
+    return render_template("doone.html")
+
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({
