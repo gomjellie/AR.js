@@ -19,9 +19,34 @@
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs>
 		<a-assets>
-		    <a-asset-item id="test" src="static/media/menwithmap2.obj" ></a-asset-item>
-		    <a-asset-item id="test-mtl" src="static/media/menwithmap2.mtl"></a-asset-item>
+			<a-asset-item id="3dae" src="static/media/doone/3dae.obj" ></a-asset-item>
+			<a-asset-item id="3dae-mtl" src="static/media/doone/3dae.mtl"></a-asset-item>
+			<a-asset-item id="eyesman" src="static/media/doone/eyesman.obj" ></a-asset-item>
+			<a-asset-item id="eyesman-mtl" src="static/media/doone/eyesman.mtl"></a-asset-item>
+			<a-asset-item id="hands" src="static/media/doone/hands.obj" ></a-asset-item>
+			<a-asset-item id="hands-mtl" src="static/media/doone/hands.mtl"></a-asset-item>
+			<a-asset-item id="mantop" src="static/media/doone/mantop.obj" ></a-asset-item>
+			<a-asset-item id="mantop-mtl" src="static/media/doone/mantop.mtl"></a-asset-item>
+			<a-asset-item id="test" src="static/media/menwithmap2.obj" ></a-asset-item>
+			<a-asset-item id="test-mtl" src="static/media/menwithmap2.mtl"></a-asset-item>
 		</a-assets>
+		<!-- <a-entity obj-model="obj: #test; mtl: #tree-mtl"></a-entity> -->
+
+		<a-marker type='pattern' url='static/marker/doone/3dae.patt'>
+			<a-entity scale="0.001 0.001 0.001" rotation="0 270 0" obj-model="obj: #3dae; mtl: #3dae-mtl"></a-entity>
+		</a-marker>
+
+		<a-marker type='pattern' url='static/marker/doone/eyesman.patt'>
+			<a-entity scale="0.0001 0.0001 0.0001" position="-0.5 3 0" rotation="0 0 270" obj-model="obj: #eyesman; mtl: #eyesman-mtl"></a-entity>
+		</a-marker>
+
+		<a-marker type='pattern' url='static/marker/doone/hands.patt'>
+			<a-entity scale="0.0005 0.0005 0.0005" position="-1.2 3 0" rotation="0 0 270" obj-model="obj: #hands; mtl: #hands-mtl"></a-entity>
+		</a-marker>
+
+		<a-marker type='pattern' url='static/marker/doone/mantop.patt'>
+			<a-entity scale="0.0005 0.0005 0.0005" rotation="0 0 0" obj-model="obj: #mantop; mtl: #mantop-mtl"></a-entity>
+		</a-marker>
 
         <a-marker type='pattern' url='static/marker/testA.patt'>
             <a-entity scale="0.0005 0.0005 0.0005" rotation="0 0 0" obj-model="obj: #test; mtl: #test-mtl"></a-entity>
