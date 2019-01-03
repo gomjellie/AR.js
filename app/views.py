@@ -49,7 +49,7 @@ def joowon():
 def doone():
     return render_template("doone.html")
 
-@app.route("/nam/<int:id>", methods=["GET"])
+@app.route("/nam/<string:id>", methods=["GET"])
 def nam(id):
     return render_template("nam.html", id=id)
 
