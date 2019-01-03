@@ -49,6 +49,10 @@ def joowon():
 def doone():
     return render_template("doone.html")
 
+@app.route("/nam/<int:id>", methods=["GET"])
+def nam(id):
+    return render_template("nam.html", id=id)
+
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({
